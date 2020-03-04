@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+source configuration.sh
+
+# Use SSH port forwarding to access Jupyter Lab (port 8888), code-server (port 8443) and TensorBoard (port 6006) securely:
+# https://cloud.google.com/solutions/connecting-securely#port-forwarding-over-ssh
+gcloud compute ssh --zone=$zone $instance_name -- -A -L 8888:localhost:8888 -L 8443:localhost:8443 -L 6006:localhost:6006

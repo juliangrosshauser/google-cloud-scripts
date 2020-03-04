@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# See: https://cloud.google.com/sdk/gcloud/reference/compute/instances/describe
+
+source configuration.sh
+
+gcloud compute instances describe $instance_name --zone=$zone | grep status:

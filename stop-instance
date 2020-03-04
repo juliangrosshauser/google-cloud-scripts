@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# See: https://cloud.google.com/sdk/gcloud/reference/compute/instances/stop
+
+source configuration.sh
+
+gcloud compute instances stop $instance_name --zone=$zone

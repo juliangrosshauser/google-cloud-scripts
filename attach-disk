@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# See:
+# https://cloud.google.com/compute/docs/disks/add-persistent-disk#create_disk
+# https://docs.nvidia.com/ngc/ngc-gcp-setup-guide/creating-persistent-ssd-dataset-disks.html#creating-attaching-ssd-dataset-disk-cli
+
+source configuration.sh
+source configuration-disk.sh
+
+gcloud compute instances attach-disk $instance_name --disk $disk_name
